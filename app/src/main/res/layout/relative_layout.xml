@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewCurrentTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonStartTimers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="Current Timer: --:--"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/editTextTimerDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCurrentTimer"
+        android:hint="Enter duration in seconds"
+        android:inputType="number"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/buttonAddTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTimerDuration"
+        android:layout_centerHorizontal="true"
+        android:text="Add Timer"
+        android:layout_marginBottom="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTimers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/buttonStartTimers"
+        android:layout_below="@id/buttonAddTimer"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/textViewCurrentTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonStartTimers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Current Timer: --:--"
+        android:textSize="36sp"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/buttonStartTimers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Start All Timers"
+        android:enabled="false"/>
+
+    <TextView
+        android:id="@+id/copyright_text"
+        android:label="@string/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© 2025 Vinit More"
+        android:textSize="8sp"
+        android:textColor="#80000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"/>
+</RelativeLayout>
