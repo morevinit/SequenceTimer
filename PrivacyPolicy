@@ -1,0 +1,67 @@
+Personal and sensitive user data
+Personal and sensitive user data includes, but isn't limited to, personally identifiable information, financial and payment information, authentication information, phonebook, contacts, device location, SMS and call-related data, health data, Health Connect data, inventory of other apps on the device, microphone, camera, and other sensitive device or usage data. If your app handles personal and sensitive user data, then you must:
+
+Limit the access, collection, use and sharing of personal and sensitive user data acquired through the app to app and service functionality and policy-conforming purposes reasonably expected by the user:
+Apps that extend usage of personal and sensitive user data for serving advertising must comply with Google Play’s ads policy.
+You may also transfer data as necessary to service providers or for legal reasons such as to comply with a valid governmental request, applicable law, or as part of a merger or acquisition with legally adequate notice to users.
+Handle all personal and sensitive user data securely, including transmitting it using modern cryptography (for example, over HTTPS).
+Use a runtime permissions request whenever available, prior to accessing data gated by Android permissions.
+Not sell personal and sensitive user data.
+'Sale' means the exchange or transfer of personal and sensitive user data to a third party for monetary consideration.
+User-initiated transfer of personal and sensitive user data (for example, when the user is using a feature of the app to transfer a file to a third party, or when the user chooses to use a dedicated purpose research study app), is not regarded as sale.
+Prominent disclosure and consent requirement
+In cases where your app’s access, collection, use or sharing of personal and sensitive user data may not be within the reasonable expectation of the user of the product or feature in question (for example, if data collection occurs in the background when the user is not engaging with your app), you must meet the following requirements:
+
+Prominent disclosure: you must provide an in-app disclosure of your data access, collection, use and sharing. The in-app disclosure:
+
+Must be within the app itself, not only in the app description or on a website;
+Must be displayed in the normal usage of the app and not require the user to navigate into a menu or settings;
+Must describe the data being accessed or collected;
+Must explain how the data will be used and/or shared;
+Cannot only be placed in a privacy policy or Terms of Service; and
+Cannot be included with other disclosures unrelated to personal and sensitive user data collection.
+Consent and runtime permissions: requests for in-app user consent and runtime permission requests must be immediately preceded by an in-app disclosure that meets the requirement of this policy. The app's request for consent:
+
+Must present the consent dialogue clearly and unambiguously;
+Must require affirmative user action (for example, tap to accept, tick a tick box);
+Must not interpret navigation away from the disclosure (including tapping away or pressing the back or home button) as consent;
+Must not use auto-dismissing or expiring messages as a means of obtaining user consent; and
+Must be granted by the user before your app can begin to collect or access the personal and sensitive user data.
+Apps that rely on other legal bases to process personal and sensitive user data without consent, such as a legitimate interest under the EU GDPR, must comply with all applicable legal requirements and provide appropriate disclosures to the users, including in-app disclosures as required under this policy.
+
+To meet policy requirements, it’s recommended that you reference the following example format for prominent disclosure when it’s required:
+
+'[This app] collects/transmits/syncs/stores [type of data] to enable  ["feature"], [in what scenario].'
+Example: 'Fitness Funds collects location data to enable fitness tracking even when the app is closed or not in use and is also used to support advertising'. 
+Example: 'Call buddy collects read and write call log data to enable contact organisation even when the app is not in use'.
+If your app integrates third-party code (for example, an SDK) that is designed to collect personal and sensitive user data by default, you must, within two weeks of receipt of a request from Google Play (or, if Google Play’s request provides for a longer time period, within that time period), provide sufficient evidence demonstrating that your app meets the prominent disclosure and consent requirements of this policy, including with regard to the data access, collection, use or sharing via the third-party code.
+
+Examples of common violations
+An app collects device location but does not have a prominent disclosure explaining which feature uses this data and/or indicates the app’s usage in the background.
+An app has a runtime permission requesting access to data before the prominent disclosure which specifies what the data is used for.
+An app that accesses a user's inventory of installed apps and doesn't treat this data as personal or sensitive data subject to the above privacy policy, data handling, and prominent disclosure and consent requirements.
+An app that accesses a user's phone or contact book data and doesn't treat this data as personal or sensitive data subject to the above privacy policy, data handling, and prominent disclosure and consent requirements.
+An app that records a user’s screen and doesn't treat this data as personal or sensitive data subject to this policy.
+An app that collects device location and does not comprehensively disclose its use and obtain consent in accordance with the above requirements.
+An app that uses restricted permissions in the background of the app including for tracking, research or marketing purposes, and does not comprehensively disclose its use and obtain consent in accordance with the above requirements. 
+An app with an SDK that collects personal and sensitive user data and doesn’t treat this data as subject to this user data policy, access, data handling (including disallowed sale), and prominent disclosure and consent requirements.
+Refer to this article for more information on the prominent disclosure and consent requirement.
+
+Restrictions for personal and sensitive data access
+In addition to the requirements above, the table below describes requirements for specific activities.
+
+Activity	 Requirement
+Your app handles financial or payment information or government identification numbers	Your app must never publicly disclose any personal and sensitive user data related to financial or payment activities or any government identification numbers.
+Your app handles non-public phone book or contact information	We don't allow unauthorised publishing or disclosure of people's non-public contacts.
+Your app contains anti-virus or security functionality, such as anti-virus, anti-malware or security-related features	Your app must post a privacy policy that, together with any in-app disclosures, explain what user data your app collects and transmits, how it's used and the type of parties with whom it's shared.
+Your app targets children	Your app must not include an SDK that is not approved for use in child-directed services. See Designing apps for children and families for full policy language and requirements.
+Your app collects or links persistent device identifiers (for example, IMEI, IMSI, SIM Serial #, etc.)	
+Persistent device identifiers may not be linked to other personal and sensitive user data or resettable device identifiers except for the purposes of
+
+Telephony linked to a SIM identity (for example, Wi-Fi calling linked to an operator account) and
+Enterprise device management apps using device owner mode.
+These uses must be prominently disclosed to users as specified in the user data policy.
+
+Please consult this resource for alternative unique identifiers.
+
+Please read the ads policy for additional guidelines for Android advertising ID.
